@@ -28,7 +28,7 @@ particlesJS('particles-js', {
 
 // 2. 纪念日倒计时
 function updateCountdown() {
-    const anniversaryDate = new Date('2023-07-15'); // 修改成你们的纪念日
+    const anniversaryDate = new Date('2024-04-13'); // 修改成你们的纪念日
     const now = new Date();
     const diff = now - anniversaryDate;
     
@@ -48,14 +48,7 @@ updateCountdown();
 
 // 3. 随机情话
 const loveQuotes = [
-    "遇见你是我人生中最美的bug，而我永远不想修复。",
-    "你的笑容是我的404错误——找不到，就崩溃。",
-    "我是你的CPU，只为你处理所有情绪。",
-    "爱你这件事，时间复杂度是O(1)，永远瞬间完成。",
-    "我们的爱没有break条件，是无限循环。",
-    "你是我生命中的exception，让我不再按部就班。",
-    "if (love) { love.you(forever); }",
-    "while(true) { love.you++; }"
+    "这是我们一起过的第二个情人节，虽然我们相隔万里，但是我们的心一直贴得很近。"
 ];
 
 document.getElementById('random-quote').textContent = 
@@ -112,9 +105,10 @@ loadTimeline();
 
 // 5. 照片墙
 const photos = [
-    { src: "photos/1.jpg", caption: "第一次旅行", date: "2023-08" },
-    { src: "photos/2.jpg", caption: "你生日那天", date: "2023-09" },
-    { src: "photos/3.jpg", caption: "秋天的约会", date: "2023-10" }
+    { src: "photos/yingguo.jpg", caption: "一起游玩伦敦", date: "2025-12-25" },
+    { src: "photos/kanqiu.jpg", caption: "一起看球赛", date: "2025-12-27" },
+    { src: "photos/daying.jpg", caption: "一起逛博物馆", date: "2025-12-31" }
+    { src: "photos/kuanian.jpg", caption: "2026一起跨年", date: "2026-01-01" }
 ];
 
 function loadGallery() {
@@ -138,7 +132,7 @@ loadGallery();
 
 // 6. 情书打字效果
 const loveLetter = `
-亲爱的[她的名字]：
+亲爱的昱雪：
 
 写下这些字的时候，窗外的云刚好经过。
 像极了第一次见你时，我的心跳。
@@ -150,7 +144,7 @@ const loveLetter = `
 让所有平凡的日子都闪闪发光。
 
 爱你的，
-[你的名字]
+铁蛋儿
 ${new Date().toLocaleDateString('zh-CN')}
 `;
 
