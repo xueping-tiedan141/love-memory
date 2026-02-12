@@ -48,66 +48,18 @@ updateCountdown();
 
 // 3. 随机情话
 const loveQuotes = [
-    "这是我们一起过的第二个情人节，虽然我们相隔万里，但是我们的心一直贴得很近。"
+    "这是我们一起过的第二个情人节，虽然我们相隔万里，但是我们的心一直贴得很近。",
 ];
 
 document.getElementById('random-quote').textContent = 
-    loveQuotes[Math.floor(Math.random() * loveQuotes.length)];
+    loveQuotes[0];
 
-// 4. 加载回忆时间轴
-const memories = [
-    {
-        date: "2023-07-15",
-        title: "✨ 第一次遇见你",
-        description: "在那个夏天的咖啡馆，阳光刚好落在你发梢。",
-        icon: "☕"
-    },
-    {
-        date: "2023-08-20",
-        title: "🎬 第一次约会",
-        description: "看了场无聊的电影，但因为你在旁边，每一帧都精彩。",
-        icon: "🎥"
-    },
-    {
-        date: "2023-10-01",
-        title: "💕 在一起的日子",
-        description: "你说好，我说永远。",
-        icon: "💑"
-    },
-    {
-        date: "2024-01-01",
-        title: "🎆 跨年之夜",
-        description: "在烟花下许愿：以后的每一年都要有你。",
-        icon: "✨"
-    }
-];
-
-function loadTimeline() {
-    const timeline = document.getElementById('timeline');
-    timeline.innerHTML = '';
-    
-    memories.forEach((memory, index) => {
-        const item = document.createElement('div');
-        item.className = 'timeline-item fade-in-up';
-        item.innerHTML = `
-            <div class="timeline-content">
-                <div class="timeline-icon">${memory.icon}</div>
-                <div class="timeline-date">${memory.date}</div>
-                <h3>${memory.title}</h3>
-                <p>${memory.description}</p>
-            </div>
-        `;
-        timeline.appendChild(item);
-    });
-}
-
-//loadTimeline();
 
 // 5. 照片墙
 const photos = [
     { src: "photos/yingguo.jpg", caption: "一起游玩伦敦", date: "2025-12-25" },
     { src: "photos/kanqiu.jpg", caption: "一起看球赛", date: "2025-12-27" },
-    { src: "photos/daying.jpg", caption: "一起逛博物馆", date: "2025-12-31" }
+    { src: "photos/daying.jpg", caption: "一起逛博物馆", date: "2025-12-31" },
     { src: "photos/kuanian.jpg", caption: "2026一起跨年", date: "2026-01-01" }
 ];
 
