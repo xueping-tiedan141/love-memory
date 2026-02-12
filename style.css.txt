@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #ff6b95;
+    --secondary: #ffb6c1;
+    --light: #fff0f3;
+    --dark: #4a4a4a;
+    --shadow: 0 10px 30px rgba(255, 107, 149, 0.1);
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #fff5f7 0%, #ffe9f0 100%);
+}
+
+/* 浪漫粒子背景 */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, #fff9fb 0%, #fff0f5 100%);
+}
+
+/* 容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 头部区域 */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: 100%;
+}
+
+.avatar-frame {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+    box-shadow: var(--shadow);
+}
+
+.avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--primary);
+}
+
+.heart-beat {
+    display: inline-block;
+    animation: heartbeat 1.5s ease infinite;
+    color: #ff4d6d;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* 纪念日倒计时 */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.countdown-item span:first-child {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.countdown-item span:last-child {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 5px;
+}
+
+.love-quote {
+    font-size: 1.2em;
+    color: #666;
+    font-style: italic;
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 107, 149, 0.1);
+    border-radius: 50px;
+}
+
+/* 时间轴 */
+.timeline-section {
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    margin: 40px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    color: var(--primary);
+    margin-bottom: 50px;
+}
+
+.section-title i {
+    margin-right: 10px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--primary), transparent);
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    width: calc(50% - 40px);
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-right: auto;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-date {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* 照片墙 */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white;
+    padding: 20px 10px 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+}
+
+/* 情书 */
+.love-letter {
+    background: white;
+    border-radius: 30px;
+    padding: 60px;
+    margin: 60px 0;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.letter-content {
+    max-width: 600px;
+    margin: 30px auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+    white-space: pre-line;
+}
+
+.btn-love {
+    background: linear-gradient(45deg, var(--primary), #ff8e9e);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+}
+
+.btn-love:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 149, 0.4);
+}
+
+/* 音乐按钮 */
+.music-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.music-btn:hover {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8em;
+    }
+    
+    .countdown {
+        gap: 15px;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+    }
+    
+    .hero-content {
+        padding: 30px;
+    }
+}
+
+/* 加载动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease;
+}

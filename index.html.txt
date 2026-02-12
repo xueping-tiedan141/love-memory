@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 我们的故事 | 爱与时光</title>
+    
+    <!-- 字体和图标库 -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 浪漫粒子背景 -->
+    <div id="particles-js"></div>
+
+    <!-- 主内容 -->
+    <div class="container">
+        <!-- 头部区域：你们的合照+名字 -->
+        <header class="hero">
+            <div class="hero-content">
+                <div class="avatar-frame">
+                    <!-- 替换成你们的合照 -->
+                    <img src="photos/couple.jpg" alt="我们" id="hero-photo">
+                </div>
+                <h1 class="title">
+                    <span class="heart-beat">❤️</span> 
+                    [你的名字] & [她的名字]
+                    <span class="heart-beat">❤️</span>
+                </h1>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span id="days">0</span>
+                        <span>天</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">0</span>
+                        <span>小时</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">0</span>
+                        <span>分钟</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">0</span>
+                        <span>秒</span>
+                    </div>
+                </div>
+                <p class="love-quote" id="random-quote">加载中...</p>
+            </div>
+        </header>
+
+        <!-- 时间轴：我们的回忆 -->
+        <section class="timeline-section">
+            <h2 class="section-title">
+                <i class="fas fa-clock"></i> 时光胶囊
+            </h2>
+            <div class="timeline" id="timeline"></div>
+        </section>
+
+        <!-- 照片墙 -->
+        <section class="gallery-section">
+            <h2 class="section-title">
+                <i class="fas fa-images"></i> 定格瞬间
+            </h2>
+            <div class="gallery" id="gallery"></div>
+        </section>
+
+        <!-- 专属情书 -->
+        <section class="love-letter">
+            <h2 class="section-title">
+                <i class="fas fa-envelope"></i> 写给你的信
+            </h2>
+            <div class="letter-content" id="love-letter">
+                <!-- 动态打字效果显示情书 -->
+            </div>
+            <button id="reveal-letter" class="btn-love">
+                <i class="fas fa-heart"></i> 打开情书
+            </button>
+        </section>
+
+        <!-- 音乐播放器（隐藏） -->
+        <audio id="bg-music" loop>
+            <source src="your-song.mp3" type="audio/mpeg">
+        </audio>
+        <button id="music-toggle" class="music-btn">
+            <i class="fas fa-music"></i>
+        </button>
+    </div>
+
+    <!-- 脚本 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="memories.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
